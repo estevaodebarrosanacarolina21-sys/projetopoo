@@ -1,6 +1,0 @@
-{
-  "// nota": "app.css é uma folha de estilo do JavaFX, não CSS de navegador. As propriedades -fx-* não são 'vendor prefixes' e não têm equivalente padrão — por isso desativamos essa checagem, que gera falsos positivos.",
-  "css.lint.vendorPrefix": "ignore",
-  "scss.lint.vendorPrefix": "ignore",
-  "less.lint.vendorPrefix": "ignore"
-}
