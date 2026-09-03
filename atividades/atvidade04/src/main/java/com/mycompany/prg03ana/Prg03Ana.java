@@ -1,6 +1,7 @@
 package com.mycompany.prg03ana;
 
 // Componentes de layout, cores, dimensoes, fontes e espacamentos da interface.
+import br.com.ifba.usuario.validar.ValidadorUsuario;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -197,6 +198,9 @@ public class Prg03Ana {
             } else if (!senha.equals(confirmacao)) {
                 JOptionPane.showMessageDialog(janela,
                         "As senhas não coincidem.", "Erro", JOptionPane.ERROR_MESSAGE);
+            } else if (ValidadorUsuario.contemPalavraProibida(campoLogin.getText().trim())) {
+                JOptionPane.showMessageDialog(janela,
+                        "Login contém palavra não permitida.", "Erro", JOptionPane.ERROR_MESSAGE);
             } else {
                 JOptionPane.showMessageDialog(janela,
                         "Cadastro realizado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
