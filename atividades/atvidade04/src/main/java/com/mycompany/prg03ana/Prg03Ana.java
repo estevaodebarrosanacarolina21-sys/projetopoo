@@ -198,6 +198,7 @@ public class Prg03Ana {
             } else if (!senha.equals(confirmacao)) {
                 JOptionPane.showMessageDialog(janela,
                         "As senhas não coincidem.", "Erro", JOptionPane.ERROR_MESSAGE);
+            // Bloqueia o cadastro quando o login usa uma palavra proibida.
             } else if (ValidadorUsuario.contemPalavraProibida(campoLogin.getText().trim())) {
                 JOptionPane.showMessageDialog(janela,
                         "Login contém palavra não permitida.", "Erro", JOptionPane.ERROR_MESSAGE);
